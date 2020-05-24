@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Autocomplete />
+    <autocomplete
+            items-url="/server-path/items"
+            :min-chars=2 />
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 import Autocomplete from './components/Autocomplete.vue'
 
 export default {
-  name: 'Autocomplete',
+  name: 'App',
   components: {
     Autocomplete
   }
@@ -24,5 +25,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  max-width: 300px;
+  width: 100%;
 }
 </style>
